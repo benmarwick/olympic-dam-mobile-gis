@@ -1,21 +1,27 @@
 # Olympic Dam Mobile GIS Repository
 
-This repository contains files for the mobile GIS used during the 
-Olympic Dam archaeological surveys conducted by Hughes Environment
-& Heritage P/L during 2007-2010. 
+This repository contains the key files for the mobile GIS used 
+during the Olympic Dam archaeological surveys conducted by 
+Hughes Environment & Heritage P/L during 2007-2010. 
 
 The PDF documents contains information on how the files were used 
 and explanations of the field names. These manuals were written for
-users who had already received some in-person training, so they are
-not a complete summary of the entire workflow. 
+users who had already received some in-person training. So they 
+are not a complete summary of the entire workflow, but they give 
+some insights into how the various parts of our mobile GIS worked
+together. 
 
 Most of the other files are the three recording forms that were used 
-on TDS Nomad hardware running Windows Mobile 6 and ArcPad 7.1. The 
-form itself is an apl file, which is accompanied by a shapefile to 
-store the spatial attribute data. The vbs files activate the forms
-to perform data checking. The apx and apa files a configuration files
-that set the user interface and GPS communications. Except for the 
-shapefiles, all files can be viewed and edited with a text editor.
+on TDS Nomad hardware running Windows Mobile 6 and ArcPad 7.1. 
+'ArcSite' is the main recording form with the complete set of variables,
+'BroadB' is a slimmed down version for 'broadbrush' recording, and
+'Notes' is for freeform note-taking. The forms themselves are apl 
+files, which are each accompanied by a shapefile to store the spatial 
+attribute data. The vbs files activate the forms to perform data 
+checking and basic calculations. The apx and apa files are 
+configuration files that set the user interface and GPS communications. 
+Except for the shapefiles, all files can be viewed and edited with 
+a text editor.
 
 All of these files are free for reuse according to the conditions of 
 the licence below. 
