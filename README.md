@@ -1,5 +1,7 @@
 # Olympic Dam Mobile GIS Repository
 
+[![DOI](https://zenodo.org/badge/4763/benmarwick/olympic-dam-mobile-gis.png)](http://dx.doi.org/10.5281/zenodo.11833)
+
 This repository contains the key files for the mobile GIS used 
 during the Olympic Dam archaeological surveys conducted by 
 Hughes Environment & Heritage P/L during 2007-2010. 
