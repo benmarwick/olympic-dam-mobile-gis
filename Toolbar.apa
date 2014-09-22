@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArcPad>
+ <APPLET>
+  <TOOLBARS>
+   <TOOLBAR name="main" visible="false" caption=""></TOOLBAR>
+   <TOOLBAR name="browse" visible="false" caption=""></TOOLBAR>
+   <TOOLBAR name="draw" visible="false" caption=""></TOOLBAR>
+   <TOOLBAR name="tlbrCustomMain1" caption="" visible="true">
+    <TOOLBUTTON command="openmap">
+     <MENUITEM command="savemap"></MENUITEM>
+     <MENUITEM command="options"></MENUITEM>
+     <MENUITEM command="mapproperties"></MENUITEM>
+     <MENUITEM command="help"></MENUITEM>
+     <MENUITEM command="exit"></MENUITEM>
+    </TOOLBUTTON>
+    <TOOLBUTTON command="gpspositionwindow">
+     <MENUITEM command="gpsenable"></MENUITEM>
+     <MENUITEM command="gpstracklog"></MENUITEM>
+     <MENUITEM command="modegoto"></MENUITEM>
+     <MENUITEM command="addgpspoint"></MENUITEM>
+     <MENUITEM command="gpsvertex"></MENUITEM>
+    </TOOLBUTTON>
+    <TOOLBUTTON command="layers"></TOOLBUTTON>
+    <TOOLBUTTON command="modepan">
+     <MENUITEM command="modeidentify"></MENUITEM>
+     <MENUITEM command="modeselect"></MENUITEM>
+     <MENUITEM command="featureproperties"></MENUITEM>
+     <MENUITEM command="find"></MENUITEM>
+     <MENUITEM command="refresh"></MENUITEM>
+     <MENUITEM command="modeadvancedselect"></MENUITEM>
+    </TOOLBUTTON>
+    <TOOLBUTTON command="modezoomin">
+     <MENUITEM command="zoomprevious"></MENUITEM>
+     <MENUITEM command="fixedzoomin"></MENUITEM>
+    </TOOLBUTTON>
+    <TOOLBUTTON command="modezoomout">
+     <MENUITEM command="zoomfullextent"></MENUITEM>
+     <MENUITEM command="fixedzoomout"></MENUITEM>
+    </TOOLBUTTON>
+    <TOOLBUTTON command="modefreehandmeasure"></TOOLBUTTON>
+   </TOOLBAR>
+  </TOOLBARS>
+  <FORMS></FORMS>
+ </APPLET>
+</ArcPad>
