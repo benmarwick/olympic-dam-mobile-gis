@@ -2,9 +2,17 @@
 
 [![DOI](https://zenodo.org/badge/4763/benmarwick/olympic-dam-mobile-gis.png)](http://dx.doi.org/10.5281/zenodo.11833)
 
-This repository contains the key files for the mobile GIS used 
-during the Olympic Dam archaeological surveys conducted by 
-Hughes Environment & Heritage P/L during 2007-2010. 
+This repository contains:
+
+1. Supplementary material supporting the analysis of site recording
+rates with and without a mobile GIS at Olympic Dam. The Rmd file 
+contains the data and R source code and the html file is the 
+output from executing that source code. 
+
+2. The key files for the mobile GIS used during the Olympic Dam 
+archaeological surveys conducted by Hughes Environment & 
+Heritage P/L during 2007-2010. These are in the directory 
+'recording_forms_and_manuals'.
 
 The PDF documents contains information on how the files were used 
 and explanations of the field names. These manuals were written for

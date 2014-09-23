@@ -1,0 +1,80 @@
+---
+title: "Olympic Dam Mobile GIS Efficiency Gain Supplementary Materials"
+author: "Ben Marwick"
+date: "Monday, September 22, 2014"
+output: 
+  html_document:
+    theme: readable
+---
+
+This document presents the statistical analysis in the 
+paper 'Efficiency gains with the use of mobile 
+Geographic Information Systems for intensive 
+archaeological survey of Holocene forager sites in 
+arid South Australia'.
+
+First, we input the data to reproduce the table that appears
+in the paper. 
+
+```{r, get-data, results="asis"}
+# read data in
+dat <- read.table(text = "
+Year Pre.2007  y2007	y2008	y2009
+Area.surveyed.(km2)	35	95	275	145
+Rate.of.survey.(km2/person/day)	0	0.3	0.3	0.3
+Total.no.persondays	0 317	917	483
+Approximate.number.of.sites.recorded	665	3900	6600	5500
+No.sites.recorded/person/day	 3.5	12.3	7.2	11.3
+Frequency.of.occurrence.of.sites/km2	19	41	24	38", row.names = 1, header = TRUE)
+# print table
+knitr::kable(dat)
+```
+
+Second, we compute the correlation between the rate of recording
+and the density of sites.
+
+```{r cor-rate-density}
+# transpose dataframe for conviennence 
+dat_t <- data.frame(t(dat))
+
+# correlation of sites recorded by density of sites
+dat_cor <- cor.test(dat_t[,5], dat_t[,6], method = 'pearson')
+```
+
+The correlation is high (r = `r unname(dat_cor$estimate)`)
+and significant (p = `r unname(dat_cor$p.value)`). So we 
+need to remove this effect to get a reliable estimate of
+the difference made by the introduction of the mobile GIS
+technology in the 2007-2009 fieldwork. 
+
+Third, we can isolate the effect of site density on recording 
+rate by computing a linear model for the 2007-2009 data 
+and using this model to predicting the site recording rate 
+given the density for the pre-2007 data
+
+```{r lm-2007-2009-data}
+# linear model for sites recorded by density of sites
+# during  2007-2009 
+
+# subset 2007-2009 data
+dat_t_s <- dat_t[2:4,]
+
+# linear model for sites recorded by density of sites, 2007-2009
+summary(dat_t_s_lm <- lm(dat_t_s[,5] ~ dat_t_s[,6]))
+```
+
+With this model we can predict how many sites we'd expect
+to be recorded with a mobile GIS given 19 sites per square 
+kilometer (the site density for the pre-2007 data), which 
+is `r round(19 * unname(dat_t_s_lm[[1]][2]) + unname(dat_t_s_lm[[1]][1]),2)`.
+
+The difference of 2.2 sites/person/day between the 
+actual pre-2007 average rate of 3.5 and the extrapolated 
+average rate of 5.7 is most likely due to the use of mobile
+GIS. This represents a `r round(2.2/3.5,2)*100` percent 
+increase in the site recording rate.
+
+#### Dependencies for this repository
+```{r}
+sessionInfo()
+```
