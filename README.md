@@ -1,6 +1,10 @@
 # Olympic Dam Mobile GIS Repository
 
-[![DOI](https://zenodo.org/badge/4763/benmarwick/olympic-dam-mobile-gis.png)](http://dx.doi.org/10.5281/zenodo.11833)
+Archived at: <http://dx.doi.org/10.5281/zenodo.11833>
+
+Refered to in this publication: 
+
+Marwick, B., Hiscock, P., Sullivan, M., & Hughes, P. 2017 Landform boundary effects on Holocene forager landscape use in arid South Australia. Journal of Archaeological Science: Reports. <http://doi.org/10.1016/j.jasrep.2017.07.004>
 
 This repository contains:
 
